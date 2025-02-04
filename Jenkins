@@ -18,7 +18,7 @@ pipeline {
     
        stage('deploy') {
         steps {
-         echo "deploying...."
+         sh "sudo cp /assignment/target/webapps.war /opt/tomcat/webapps"
         }
        }
         stage('test') {
