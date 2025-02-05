@@ -15,13 +15,19 @@ pipeline {
           sh 'mvn clean install'
        }
      }
-       stage('deploy') {
-
-       steps {
-       sh 'echo "kasturi1997" | sudo -S cp /assignment/target/webapps.war /opt/tomcat/webapps'
+      
         }
        }
-        stage('test') {
+        stage('test') {stages {
+        stage('Deploy to Tomcat') {
+            steps {
+                script {
+                    sh 'echo "your-password" | sudo -S cp /assignment/target/webapps.war /opt/tomcat/webapps'
+                }
+            }
+        }
+    }
+}
           steps {
            echo "testing..."
           }
