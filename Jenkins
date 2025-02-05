@@ -15,6 +15,7 @@ pipeline {
           sh 'mvn clean install'
        }
      }
+
         stage('test') {stages {
         stage('Deploy to Tomcat') {
             steps {
