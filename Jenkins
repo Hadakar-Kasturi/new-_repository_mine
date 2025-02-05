@@ -15,8 +15,6 @@ pipeline {
           sh 'mvn clean install'
        }
      }
-
-        stage('test') {stages {
         stage('Deploy to Tomcat') {
             steps {
                 script {
@@ -24,7 +22,7 @@ pipeline {
                 }
             }
         }
-    }
+        stage('test')
           steps {
            echo "testing..."
           }
