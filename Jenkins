@@ -20,7 +20,7 @@ pipeline {
         stage('Deploy to Tomcat') {
             steps {
                 script {
-                    sh 'echo "your-password" | sudo -S cp /assignment/target/webapps.war /opt/tomcat/webapps'
+                    sh 'echo "kasturi1997" | sudo -S cp /assignment/target/webapps.war /opt/tomcat/webapps'
                 }
             }
         }
