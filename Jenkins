@@ -12,15 +12,13 @@ pipeline {
        }
      }
      stage('build') {
-
-       steps {
+      steps {
           sh 'mvn clean install'
        }
      }
-    
        stage('deploy') {
 
-        steps {
+       steps {
        sh "echo 'admin' | sudo -S cp /assignment/target/webapps.war /opt/tomcat/webapps"
         }
        }
