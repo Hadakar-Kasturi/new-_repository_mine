@@ -20,7 +20,8 @@ agent any
     
        stage('deploy') {
         steps {
-         sh "sudo -s cp /assignment/target/webapps.war /opt/tomcat/webapps"
+         echo "your_password" | sudo -S cp /assignment/target/webapps.war /opt/tomcat/webapps
+
         }
        }
         stage('test') {
